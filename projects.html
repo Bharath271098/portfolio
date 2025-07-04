@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects</title>
+   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .projects-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .section-header p {
+      color: #555;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .project-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+
+    .project-image {
+      flex: 1;
+    }
+
+    .project-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .project-details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .project-details h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .project-details p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background-color: #7b2ff7;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+      width: fit-content;
+    }
+
+    .btn:hover {
+      background-color: #5f22c9;
+    }
+
+    @media (max-width: 768px) {
+      .project-row {
+        flex-direction: column;
+      }
+    }
+
+  .social-sidebar {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px;
+      z-index: 2;
+    }
+
+    .social-sidebar a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      color: black;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+
+    .social-sidebar a:hover {
+      background: #f83738;
+      color: white;
+    }
+
+
+  </style>
+</head>
+
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
+
+<script src="main.js" defer></script>
+<body>
+  <header class="header">
+  <div class="logo">
+    <img src="logo.png" alt="Logo" />
+  </div>
+
+  <!-- Toggle button for mobile -->
+  <button id="menu-toggle" class="menu-toggle">
+    <i class="fas fa-bars"></i> <!-- Requires Font Awesome -->
+  </button>
+
+  <!-- Navigation Menu -->
+  <nav class="nav-menu" id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+
+  <section class="projects-section">
+    <div class="section-header">
+      <h2>Projects</h2>
+      <p>Here you will find some of the personal and client projects I created, each with its own case study.</p>
+    </div>
+
+    <div class="project-row">
+      <div class="project-image">
+        <img src="Securestep-website.png" alt="SecureStep website" />
+      </div>
+      <div class="project-details">
+        <h3>SecureStep</h3>
+        <p>SecureStep offers customized insurance plans to match your unique needs — covering health, life, vehicle, travel, and property with expert guidance and support.</p>
+        <a href="securestep.html" class="btn" target="_blank">Case Study</a>
+      </div>
+    </div>
+
+    <div class="project-row">
+      <div class="project-image">
+        <img src="Gurthimpu-website.png" alt="Gurthimpu website" />
+      </div>
+      <div class="project-details">
+        <h3>Gurthimpu</h3>
+        <p>Gurthimpu Foundation empowers persons with disabilities through education, employment, healthcare, and entrepreneurship. Driven by lived experience, we break barriers and build inclusive, opportunity-rich communities.</p>
+        <a href="Gurthimpu.html" class="btn" target="_blank">Case Study</a>
+      </div>
+    </div>
+
+    <div class="project-row">
+      <div class="project-image">
+        <img src="Taza-Mangoes-Website.png" alt="Taza Mangoes Website" />
+      </div>
+      <div class="project-details">
+        <h3>Taza Mangoes Store</h3>
+        <p>At Taaza Mangoes, we deliver handpicked, naturally ripened, chemical-free mangoes straight from the farm to your doorstep. With a passion for quality and freshness, we bring you the true taste of India’s favorite fruit—juicy, flavorful, and farm-fresh every time.</p>
+        <a href="Taaza.html" class="btn" target="_blank">Case Study</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-about">
+      <h3>Bharath Kumar Appari</h3>
+      <p>A Frontend focused Web Developer building the Frontend of Websites and<br>
+         Web Applications that leads to the success of the overall product</p>
+    </div>
+    <div class="footer-social">
+      <h3>SOCIAL</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/bharath-kumara-appari-18b08a216/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Bharath271098" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/Bharath271098" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/bharath0608/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/917032191793" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="footer-bottom" style="text-align: center; color: white; background: #000; padding: 20px 0;">
+    <p>&copy; 2025. Made by <a href="index.html" style="color:#f83738;">Bharath Kumar Appari</a></p>
+  </div>
+</footer>
+
+
+</body>
+</html>

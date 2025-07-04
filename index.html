@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+         .hero-section {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('Background.jpg') center/cover no-repeat;
+      padding: 120px;
+      animation: fadeIn 1.5s ease-in;
+      color: #fff;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero-section > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .typed-text {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 30px;
+      min-height: 48px;
+    }
+
+    .btn-primary {
+      padding: 14px 32px;
+      background-color: #1da9ff;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #0087db;
+    }
+
+    .scroll-indicator {
+      margin-top: 40px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+    }
+
+    .social-sidebar {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px;
+      z-index: 2;
+    }
+
+    .social-sidebar a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      color: black;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+
+    .social-sidebar a:hover {
+      background: #f83738;
+      color: white;
+    }
+
+    .static-lead {
+      font-size: 1.1rem;
+      color: #fff;
+      max-width: 700px;
+      margin-bottom: 10px;
+    }
+
+    .case-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .case-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .case-section p {
+      margin-bottom: 20px;
+    }
+
+    .tools-used {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .tool-badge {
+      padding: 10px 20px;
+      background: #eee;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+
+    .about-me-section {
+      padding: 80px 20px;
+      background-color: #fff;
+    }
+
+    .about-me-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .about-me-image {
+      flex: 1;
+      text-align: Center;
+    }
+
+    .about-me-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 35% 20%;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+    .about-me-text {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .about-me-text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-me-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .about-me-text .btn-primary {
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      .about-me-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-me-text {
+        max-width: 100%;
+      }
+
+      .about-me-text p {
+        text-align: left;
+
+      .footer-about {
+  text-align: left;
+}
+
+
+      }
+    }
+  </style>
+</head>
+<script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
+
+<script src="main.js" defer></script>
+
+<body>
+  <header class="header">
+  <div class="logo">
+    <img src="logo.png" alt="Logo" />
+  </div>
+
+  <!-- Toggle button for mobile -->
+  <button id="menu-toggle" class="menu-toggle">
+    <i class="fas fa-bars"></i> <!-- Requires Font Awesome -->
+  </button>
+
+  <!-- Navigation Menu -->
+  <nav class="nav-menu" id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+
+  <section class="hero-section">
+    <div class="social-sidebar">
+        <a href="https://www.linkedin.com/in/bharath-kumara-appari-18b08a216/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Bharath271098" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/Bharath271098" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/bharath0608/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/917032191793" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <h1 style="text-color:#f83738">HEY, I'M BHARATH</h1>
+    <p class="typed-text static-lead">Specializing in developing scalable websites and web applications that align with business goals and deliver measurable outcomes.</p>
+    <p class="typed-text"><span id="typed"></span></p>
+    <a href="projects.html" target="_blank" rel="noopener" class="btn-primary">PROJECTS</a>
+  </section>
+
+  <section class="about-me-section">
+    <div class="about-me-container">
+      <div class="about-me-image">
+        <img src="Profile1.jpeg" alt="About Me" />
+      </div>
+      <div class="about-me-text">
+        <h2>About Me</h2>
+        <p>
+          I'm a <strong>Frontend Focused Web Developer</strong> building and managing the front-end of websites and web applications that drive product success.
+        </p>
+        <p>
+          I enjoy sharing insights from my web development journey. Connect with me on <a href="https://www.linkedin.com/in/bharath-kumara-appari-18b08a216/" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://x.com/Bharath271098" target="_blank" rel="noopener">Twitter</a> for regular tips and updates.
+        </p>
+        <p>
+          I'm open to <strong>job opportunities</strong> where I can contribute, learn, and grow. If you think I’d be a good fit — <a href="contact.html" target="_blank" rel="noopener">contact me</a>.
+        </p>
+        <a href="resume.pdf" target="_blank" rel="noopener" class="btn-primary" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2 style="text-align: center;">Tools Used</h2>
+    <div class="tools-used" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
+      <div class="tool-badge">HTML</div>
+      <div class="tool-badge">CSS</div>
+      <div class="tool-badge">JavaScript</div>
+      <div class="tool-badge">PHP</div>
+      <div class="tool-badge">WordPress</div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    const typed = new Typed('#typed', {
+      strings: [
+        'A Front-End Developer passionate about clean UI.',
+        'I build modern, fast and accessible websites.',
+        'Let\'s create something amazing together!'
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
+  </script>
+
+  <footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-about">
+      <h3>Bharath Kumar Appari</h3>
+      <p>A Frontend focused Web Developer building the Frontend of Websites and<br>
+         Web Applications that leads to the success of the overall product</p>
+    </div>
+    <div class="footer-social">
+    	<h3>SOCIAL</h3>
+        <div class="social-icons">
+           <a href="https://www.linkedin.com/in/bharath-kumara-appari-18b08a216/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Bharath271098" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/Bharath271098" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/bharath0608/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/917032191793" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+    </div>
+  </div>
+  <hr />
+  <div class="footer-bottom" style="text-align: center; color: white; background: #000; padding: 20px 0;">
+    <p>&copy; 2025. Made by <a href="index.html" style="color:#f83738;">Bharath Kumar Appari</a></p>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
