@@ -103,9 +103,20 @@
 </head>
 <body>
 
+  <script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
+
+<script src="main.js" defer></script>
+<body>
   <header class="header">
   <div class="logo">
-    <img src="logo.png" alt="Logo" />
+    <img src="Logo1.png" alt="Logo" />
   </div>
 
   <!-- Toggle button for mobile -->
@@ -120,7 +131,6 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
-
 
   <section class="case-section">
     <img src="Taza-Mangoes-Website.png" alt="SecureStep Overview" class="case-image">
